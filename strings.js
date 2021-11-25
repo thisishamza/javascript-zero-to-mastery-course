@@ -24,3 +24,19 @@ let secondNewString = firstName.slice(5); // slices after the 4th index
 
 console.log(newString);
 console.log(secondNewString);
+
+//string concation 
+let string1 = "Muhammad"
+let string2 = "Hamza"
+
+let fullName = string1 + " " + string2
+console.log(fullName);
+
+
+//template string
+// use of back ticks
+let age = 24;
+let nameUser = "Hamza"
+
+let aboutMe = `My Name is ${nameUser} and my age is ${age}`
+console.log(aboutMe);

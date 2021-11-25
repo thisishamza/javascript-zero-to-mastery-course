@@ -31,3 +31,40 @@ console.log(typeof myStr);
 age = "18";
 age = Number(age); 
 console.log(typeof age);
+
+
+// undefined datatype
+let userName;
+console.log(typeof userName);  //print undefined on console
+
+// null datatype
+let variables= null;
+console.log(typeof variables); //print objects on console
+
+// object is another datatype in javascript
+// this is bug in javascript this effects the backward compatibility 
+
+
+// bigint datatype
+let myNumber = BigInt(124454654375743747457546547373742);
+console.log(myNumber);
+console.log(myNumber.MAX_SAFE_INTEGER);
+
+
+//booleans and comparison operator
+let num1 = 24;
+let num2 = 6;
+console.log(num1>num2);
+
+
+// == vs ===
+let num3 = "4"
+let num4 = 4
+console.log(num3 == num4);
+console.log( num3 === num4);
+
+
+// != vs !==
+console.log(num3 !== num4);
+console.log( num3 != num4);
+

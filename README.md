@@ -1,1 +1,1 @@
-## Javascript zero to mastery training
+## Javascript Zero to mastery Course

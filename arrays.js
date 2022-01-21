@@ -30,5 +30,6 @@ mixed.shift();
 console.log(mixed);
 
 
-// push and pop are fast compared to shift and unshift becuase 
-//they have to move elements first then add the elements in the start
+/* push and pop are fast compared to shift and unshift becuase 
+shift and unshift have to move elements first then add the elements in the start
+*/

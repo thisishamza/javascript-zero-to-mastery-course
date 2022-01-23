@@ -74,5 +74,20 @@ for (let i=0; i<=fruits.length-1;i++){
 const fruits = ['apple', 'banana']; 
 fruits.push('mango'); //wont be a error even if its constant
 console.log(fruits);
-
 //try to use const for creating primitive data types because it will be less error prone
+
+
+//Array destructuring
+const myArray = ['val1','val2'];
+let [myvar1,myvar2] = myArray; 
+//array will be destructured first index value stored in myvar1 and second value in myvar2
+
+let [myvar1,myvar2,myvar3] = myArray
+//myvar3 will be undefined
+ 
+const tempArray = ["val1","val2","val3"]
+let [myvar1,,myvar2] = myArray //second index value will be skipped
+
+const tempArray1 = ["val1","val2","val3"]
+let [myvar1, ...newTempArray] = tempArray1
+//val2 and val3 will be added into new temp array

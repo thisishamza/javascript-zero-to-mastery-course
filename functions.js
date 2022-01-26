@@ -74,3 +74,34 @@ console.log(hello);
 var hello = "Hello world"; // undefined
 let hello = "Hello world"; // this will be an error
 const hello = "Hello world"; // error in this case also
+
+
+//function inside function
+const app = () => {
+    const myfunc = () => { // declaration of function inside function
+        console.log("hello from my func")
+    };
+
+    const addTwoNumbers = (number1, number2) => {
+        console.log(number1+number2)
+    };
+
+    console.log("inside app function");
+    myfunc();  //calling function inside a function
+    addTwoNumbers();
+}
+
+
+// lexical scope
+
+function myApp(){
+    const myVar = "value1";
+    function myfunc(){
+        const myVar = "value59";
+        console.log("inside my func:" , myVar);
+    };
+    const myfunc2 = function (){};
+    const myfunc3 = ()=>{};
+    console.log(myVar);
+    myfunc();
+}

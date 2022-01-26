@@ -32,9 +32,26 @@ const tempArray = [1,32,5,6,7,3];
 console.log(findTarget(tempArray,7))
 
 
-//function declaration to function expression
+//function expression
 const sayWelcomeMessage= function(){
     console.log("Welcome to the program");
 }
 
 
+// arrow functions
+const sayWelcomeMessage= () => {
+    console.log("Welcome to the program");
+};
+
+const message = "test";
+const useThisMessage= (message) => {
+    console.log(message)
+}
+
+//if you have one parameter then you can write arrow function without the braces
+const useThisMessage= message => {
+    console.log(message)
+}
+
+// you can also write arrow function like this
+const useThisMessage= message => console.log(message);

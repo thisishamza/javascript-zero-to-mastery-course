@@ -136,3 +136,24 @@ const famousSong = band.famousSong;
 //shortcut 
 const{bandName, famousSong} = band;
 const{bandName, famousSong, ...restProps} = band; //for remaining properties
+
+
+// objects into arrays
+// very useful in real world applications
+
+const users = [
+    { userid:1,firstname: 'John', gender: 'male'},
+    { userid:1,firstname: 'Ragnor', gender: 'male'},
+    { userid:1,firstname: 'Stella', gender: 'female'},
+]
+console.log(users)
+for(let user of users){
+    console.log(user.userid); //prints all the userids in all objects inside the array
+}
+
+//nested destructuring of array of objects
+
+const[user1,user2,user3]=users; //objects in different constants
+// destructure from inside an object array
+const[{firstname},,{gender}]=users;
+const[{firstname: userfirstname},,{gender}]=users; //new variable will be created userfirstname

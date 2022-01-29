@@ -94,14 +94,47 @@ const app = () => {
 
 // lexical scope
 
-function myApp(){
+function myApp(){ //this function is in global scope    
     const myVar = "value1";
-    function myfunc(){
-        const myVar = "value59";
-        console.log("inside my func:" , myVar);
+    function myfunc(){  //myfunc lexical scope is myApp
+        console.log("inside my func:" , myVar);//first look into the function then outside then the global scope
     };
     const myfunc2 = function (){};
     const myfunc3 = ()=>{};
-    console.log(myVar);
     myfunc();
 }
+
+
+//block scope vs function scope
+
+//let and const are block scope while var is function scope
+
+{
+    let firstName = "test";
+    const middleName = "testing";
+    console.log(firstName);
+    console.log(middleName);
+} // this is a block
+console.log(firstName); 
+console.log(middleName);
+//return an error because defined inside a block scope with let and const
+
+{
+    const firstName = "hamza";
+    console.log(firstName); //firstName is different variable from above block
+}
+
+{ 
+    var firstName = "hamza";
+}
+console.log(firstName); //wont be an error because it is defined using var
+
+
+function myApp() {
+    if(true){
+        var firstName = "hamza";
+        console.log(firstName);
+    }
+    console.log(firstName);
+}
+myApp(); //var would be accessible becuase its function scope

@@ -37,4 +37,37 @@ function addAll(...numbers){
     return total;
 }
 
-addAll(1,3,5,6,10,11,22)
+addAll(1,3,5,6,10,11,22);
+
+//param destructuring
+// used with object
+// this is mostly used in react
+
+const person{
+    firstName: 'John',
+    gender: 'Male'
+}
+function printDetails(obj){ 
+    console.log(obj.firstName); //simple way to get obj vars
+    console.log(obj.gender);
+}
+
+function printDetails({firstName, gender}) {  //this is paramter destructuring 
+    console.log(obj.firstName); 
+    console.log(obj.gender);
+}
+
+printDetails(person)
+
+
+//callback functions
+
+function mySecondFunction(){
+    console.log('second');
+}
+//this is convention to use callback paramter name when you are passing a function
+function myFunction(callback){  
+    callback();
+}
+
+myFunction(mySecondFunction); //adding a function as a parameter,function is just getting passed

@@ -67,7 +67,19 @@ function mySecondFunction(){
 }
 //this is convention to use callback paramter name when you are passing a function
 function myFunction(callback){  
-    callback();
+    callback(); //here is calling the function which is passed as a parameter
 }
 
 myFunction(mySecondFunction); //adding a function as a parameter,function is just getting passed
+
+
+//function returning a function
+// a function which takes input a function and also returns a function is called HIGH ORDER FUNCTION
+function myFunc(){
+    function mySecond(){
+        console.log("hello world");
+    }
+    return mySecond; //my Func is returning a function 
+}
+const ans =  myFunc(); //now ans becomes a function
+ans();

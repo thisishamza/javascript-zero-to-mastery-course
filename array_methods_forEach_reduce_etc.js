@@ -1,0 +1,43 @@
+//important array methods
+//forEach
+//map
+//filter
+//reduce
+
+//forEach
+
+const numbers=[4,5,2,8]
+function multiplyByTwo(number, index){
+    console.log("Index is", index);
+    console.log(number*2);
+}
+//normal method
+for (let i=0; i<numbers.length; i++) { //this loop will iterate over array
+    multiplyByTwo(numbers[i],i) //and will multiply each number with 2 
+}
+
+//for each method
+// forEach is just like loop, will iterate over each elements
+// for each elenment it will call the callback function
+
+numbers.forEach(multiplyByTwo); // mutiplyByTwo a callback function actually 
+
+// let try defining callback function as a anonymous function in forEach
+numbers.forEach(function(numbers, index) {
+    console.log(`index is ${index} and numbers is ${numbers}`)
+});
+
+const users = [
+    {firstName: 'John', age: 34},
+    {firstName: 'test', age: 34},
+    {firstName: 'test1', age: 34},
+    {firstName: 'test2', age: 34},
+]
+//this will print all the firstName of all objects in users
+users.forEach(function(obj){
+    console.log(obj.firstName)
+});
+//trying this will arrow function
+users.forEach((obj) => {
+    console.log(obj.firstName)
+});

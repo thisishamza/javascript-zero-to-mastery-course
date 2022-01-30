@@ -71,3 +71,13 @@ const users = [
 const firstNameArray = users.map((user) =>{
     return user.firstName
 });
+
+
+// filter method
+const numbers=[1,2,3,4,5,6,7,8,9,10,11]
+//filter takes in a callback function and that callback function will always
+// return true or false.
+
+//filter all the even numbers from the array
+const isEven = (number) =>{return number%2===0;};
+const evenNumbers= numbers.filter(isEven);

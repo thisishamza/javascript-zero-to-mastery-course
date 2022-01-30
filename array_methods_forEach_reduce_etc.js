@@ -41,3 +41,33 @@ users.forEach(function(obj){
 users.forEach((obj) => {
     console.log(obj.firstName)
 });
+
+
+
+//map method
+const numbers = [1,2,3,4,5,6,7];
+// map method also take callback function as input
+
+const square=function(number) {
+    return number*numbers;
+}
+
+//map function will call callback function for each iteration
+//map function return an array
+const squareNumber=numbers.map(square);
+
+//if we dont return anything in the callback function, then undefined 
+// will be returned in the squareNumber array by using map method
+// it is crucial to return in callback function for map
+
+//function to store firstName of alluser
+const users = [
+    {firstName: 'John', age: 34},
+    {firstName: 'test', age: 34},
+    {firstName: 'test1', age: 34},
+    {firstName: 'test2', age: 34},
+]
+
+const firstNameArray = users.map((user) =>{
+    return user.firstName
+});

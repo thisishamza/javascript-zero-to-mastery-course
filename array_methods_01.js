@@ -17,8 +17,8 @@ for (let i=0; i<numbers.length; i++) { //this loop will iterate over array
 }
 
 //for each method
-// forEach is just like loop, will iterate over each elements
-// for each elenment it will call the callback function
+/* forEach is just like loop, will iterate over each elements
+for each elenment it will call the callback function */
 
 numbers.forEach(multiplyByTwo); // mutiplyByTwo a callback function actually 
 
@@ -56,9 +56,9 @@ const square=function(number) {
 //map function return an array
 const squareNumber=numbers.map(square);
 
-//if we dont return anything in the callback function, then undefined 
-// will be returned in the squareNumber array by using map method
-// it is crucial to return in callback function for map
+/* if we dont return anything in the callback function, then undefined 
+ will be returned in the squareNumber array by using map method
+ it is crucial to return in callback function for map */
 
 //function to store firstName of alluser
 const users = [
@@ -75,8 +75,8 @@ const firstNameArray = users.map((user) =>{
 
 // filter method
 const numbers=[1,2,3,4,5,6,7,8,9,10,11]
-//filter takes in a callback function and that callback function will always
-// return true or false.
+/* filter takes in a callback function and that callback function will always
+ return true or false. */
 
 //filter all the even numbers from the array
 const isEven = (number) =>{return number%2===0;};
@@ -92,6 +92,7 @@ const numbers = [1,2,3,4,5,10]
 const sum = numbers.reduce((accumulator, cuurentValue) => {
     return accumulator + cuurentValue;
 });
+
 /* accumulator takes in the first element of the array and current values contains
 the second value in the first iteration then iteration starts*/
 

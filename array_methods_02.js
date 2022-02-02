@@ -135,15 +135,120 @@ const products = [
 //sort low to high
 products.sort((a,b)=>{
     return a.price - b.price
-})
+});
 
 //sort high to low
 products.sort((a,b)=>{
     return b.price - a.price
-})
+});
 
 /*if you dont want sort to mutate products then
  clone products using any method */
 const lowToHigh= products.slice(0).sort((a,b)=>{
     return a.price - b.price
-})
+});
+
+
+
+
+// Find Method
+const myArray = ["hello","cat","dog","lion"];
+
+function isLength3(string){
+    return string.length === 3 ;
+}
+
+myArray.find(isLength3); //will return the first element of length 3
+myArray.find((string)=> string.length === 3); 
+
+//real world example 
+
+const users = [
+    {userId:1,userName:"John"},
+    {userId:2,userName:"test"},
+    {userId:3,userName:"test2"},
+]
+
+users.find(user => user.userId === 3);
+
+
+//every method
+// checks a condition at every element of the array
+
+const numbers=[2,4,6,8,10];
+
+/* every method also takes in callback function
+callback function will return boolean,
+Every method also return Boolean */
+
+//to check if every element in the array are even
+numbers.every(number =>number%2===0);
+
+//real world example
+
+
+const products = [
+    {productId:1,prductName: 'p1',price:300}, 
+    {productId:3,prductName: 'p2',price:600},
+    {productId:3,prductName: 'p3',price:200},
+    {productId:4,prductName: 'p4',price:2200},
+]
+
+//to check if all products are below 300000
+
+products.every(cartItem => cartItem.price > 30000);
+
+
+// Some method
+// checks if any of elements satisfy the condition
+const numbers=[2,4,6,3,10];
+
+//check if any true
+numbers.some(numbers=>numbers%2===0);
+
+// real world example for some method
+
+const products = [
+    {productId:1,prductName: 'p1',price:300}, 
+    {productId:3,prductName: 'p2',price:600},
+    {productId:3,prductName: 'p3',price:200},
+    {productId:4,prductName: 'p4',price:2200},
+]
+
+//to check if all products are below 300000
+
+products.sum(cartItem => cartItem.price > 30000); 
+//return false because their is not element with price more than 300000
+
+
+
+//Fill Method
+//fill mutates the original array
+// create new array of size 10 with every element = 0
+const myArray = new Array(10).fill(0);
+//fill an already filled array with numbers
+
+const myArray = [1,2,3,4,5,6,7,8];
+// write   start    end
+myArray.fill(0,2,5);
+
+
+
+
+//Splice Method
+// splices changes the original array
+
+//start , delete, insert
+
+const myArray = ['itemm1', 'itemm2', 'item3'];
+
+//delete
+myArray.splice(1, 1)   //delete item2
+//when we used delete it also returns the deleted item
+
+//insert
+myArray.splice(1, 0 , 'new item') // new item will inserted at index 1 
+
+//insert and delete 
+myArray.splice(1,2,"inserted item1","inserted item2")
+// this del item2 and item 3 and inserts the above items

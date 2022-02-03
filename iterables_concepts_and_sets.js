@@ -21,3 +21,41 @@ for (let item of items){
 
 const users={'key1':'val1','key2':'val2'}; //this is not iterable
 
+
+// sets
+// sets are iterables
+// store data(stored in linear way like array)
+// sets also have its own methods
+// no index based access
+// order is not guaranteed
+// sets only have unique elements
+// in real world use sets when storing user ids because they are unique
+// cannot used length property on set
+
+const numbers = new Set([1,2,3]);
+const numbers = new Set("123"); //can use string because string is also iterable
+console.log(numbers)
+
+console.log(numbers[2]) // will answer undefined because no index based access in sets
+
+const numbers = new Set();  //empty set
+const array = ['item1','item2']
+numbers.add(1);
+numbers.add(2);
+numbers.add(3);
+numbers.add(array);
+console.log(numbers);
+
+//check if set contains a number using has method
+if(numbers.has(1)){
+    console.log("1 is in set");
+}
+else{
+    console.log("1 is not in set")
+}
+
+//loop through the set
+
+for (number of numbers) {
+    console.log(numbers);
+}

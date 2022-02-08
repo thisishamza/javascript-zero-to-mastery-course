@@ -27,6 +27,10 @@ const person1 = {
 }
 
 person.about();
+// if we store the about function object in a var and then call the function, then this will be pointing toward windows not the object
+test = person.about;
+test(); // undefind because this is pointing to window not
+
 
 // if we just do this
 console.log(this); // then window object will be printed

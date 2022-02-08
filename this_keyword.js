@@ -38,3 +38,60 @@ function myFunction() {
 myFunc(); //again window object will be printed
 
 
+
+
+
+// call
+// apply
+// bind
+
+function hello() { 
+    console.log("hello world")
+}
+hello.call(); // call is used to call any function
+
+function aboutDetailedGlobal(hobby, favMusician) {
+    console.log(this.firstname, this.age);
+}
+
+
+const user1={
+    firstname: "hamza",
+    age: 19,
+    about: function() {
+        console.log(this.firstname, this.age);
+    },
+    aboutDetailed: function(hobby. favMusician) {
+        console.log(this.firstname, this.age);
+    }
+}
+
+
+const user2={
+    firstname: "hamza",
+    age: 19,
+}
+
+/* we are calling the function of obj user1 
+and passing it the user2 object then, 
+this contains the obj2 , so firstName and age 
+of user2 will be consoled on screen */
+
+user1.about.call(user2);
+
+
+user1.aboutDetailed.call(user2,"guitar","musician");
+aboutDetailedGlobal.call(user2,"guitar","musician");  // this function is not defined inside object
+
+
+// apply is just like call(internally it is using the call method)
+
+user.aboutDetailed.apply(user2,["guitar","mozart"]);
+aboutDetailedGlobal.apply(user2,["guitar","mozart"]);
+
+
+// bind returns a function which can be called later
+const func=user.aboutDetailed.bind(user1,["guitar","mozart"]);
+const func=aboutDetailedGlobal.bind(user1,["guitar","mozart"]);
+
+func();  //bind returned a function 

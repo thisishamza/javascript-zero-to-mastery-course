@@ -168,3 +168,46 @@ const[user1,user2,user3]=users; //objects in different constants
 // destructure from inside an object array
 const[{firstname},,{gender}]=users;
 const[{firstname: userfirstname},,{gender}]=users; //new variable will be created userfirstname
+
+
+
+
+// some usefull methods for objects
+
+// clone using Object.assign
+
+//memory
+
+const obj={
+    key1:"value1";
+    key2:"value2";
+}
+
+const obj2 = obj; //pointing at the same address
+
+// clone using spread operator
+const obj2 = [...obj];
+
+// clone using obj.assign
+const obj2 = Object.assign({}, obj);
+
+obj.key3 = "value3";
+
+console.log(obj) //both obj and obj will be same
+console.log(obj2)
+
+
+
+// optional chaining
+
+const user = {
+    firstName: "first",
+    address: {houseNumber:'45453'}
+}
+
+console.log(user.firstName);
+console.log(user.address.houseNumber);
+
+//if the user exits and then address exits then use ?
+// used for chained objects
+console.log(user?.address?.houseNumber);

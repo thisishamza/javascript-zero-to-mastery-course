@@ -59,3 +59,10 @@ else{
 for (number of numbers) {
     console.log(numbers);
 }
+
+
+// sets can be used to get unique elements from an array
+
+const myArray = [1,3,4,4,3,4,2,5,6,7,7,8]
+const uniqueElements = new Set(myArray);
+console.log(uniqueElements); // unique elements

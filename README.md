@@ -1,6 +1,9 @@
 
-# Javascript Zero to mastery Course &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
-> Course Link : https://www.youtube.com/watch?v=chx9Rs41W6g
+# Javascript Zero to mastery Course by Harshit &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+> Course Links : <br>
+>   Part 1: https://www.youtube.com/watch?v=chx9Rs41W6g <br>
+>   Part 2: https://www.youtube.com/watch?v=Llsq1y-HWs4 <br>
+>   Part 3: https://www.youtube.com/watch?v=pAl_uGXKXq8
 
 
 A brief description of your project, what it is used for.

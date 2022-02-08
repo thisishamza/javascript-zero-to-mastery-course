@@ -7,6 +7,17 @@
 // how to create objects 
 // key are also called properties
 
+// object literal
+// keys of objects can be just strings or symbols
+
+// key -> string 
+// key -> symbol
+const person = {
+    firstName : "harshit",
+    age: 7,
+    1:"one"  //1 will be converted into string
+}
+console.log(person.firstName);
 
 
 // const person = {name:"Harshit",age:22};

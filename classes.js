@@ -63,3 +63,41 @@ class Dog extends Animal{
 const dog_var = new Dog ("tommy",3,25);
 console.log(dog_var)
 
+// getter and setters
+class Person{
+    constructor(firstName, lastName,age){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    }
+
+    setName(firstName, lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    setFullName(fullName){
+        const [firstName, lastName] = fullName.split(" ");
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+}
+
+const person1 = new Person("muhammad","hamza",24);
+console.log(person1.fullName);
+
+//if you want to change the first and last name of object created
+
+// you can do this by using setName function
+person1.setName("hamza","ismail");
+
+// also you can do this
+person1.firstName="hamza";
+person1.lastName="ismail";
+
+// now the set method will be called changing the first name and last name of object
+person1.fullName = "Muhammad Hamza";
+console.log(person1);

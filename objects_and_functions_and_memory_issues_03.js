@@ -30,7 +30,7 @@ console.log(hello.prototype.sing());
 
 // now using prototype for object creation with methods
 function createUser(firstName, lastName, email, age, address){
-    const user = Object.create(createUser.prototype);// {}
+    const user = Object.create(createUser.prototype);// linking between __proto__ and prototype
     user.firstName = firstName;
     user.lastName = lastName;
     user.email = email;
@@ -58,21 +58,24 @@ console.log(user1.is18());
     /*************************************/
 
 // new keyword 
-// 1.) this = {}
-// 2.) return {} 
-//
+// 1.) creates and empty object
+// 2.) this = {}
+// 3.) return {} 
 
 // __proto__ 
 // // official ecmascript document
 // [[prototype]]
 
 // constructor function 
+/* if we are creating a function which can be called using new then it
+ is a convention to use first letter of function name to be capital */
 function CreateUser(firstName, lastName, email, age, address){
     this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;
     this.age = age;
     this.address = address;
+    // doesnot need to add return because new keyword returns on its own
 }
 CreateUser.prototype.about = function(){
     return `${this.firstName} is ${this.age} years old.`;
@@ -84,9 +87,21 @@ CreateUser.prototype.sing = function (){
     return "la la la la ";
 }
 
-
+// new keyword will automatically set __proto__ to prototype which we were doing manually
 const user1 = new CreateUser('harshit', 'vashsith', 'harshit@gmail.com', 18, "my address");
 const user2 = new CreateUser('harsh', 'vashsith', 'harshit@gmail.com', 19, "my address");
 const user3 = new CreateUser('mohit', 'vashsitha', 'harshit@gmail.com', 17, "my address");
 console.log(user1);
 console.log(user1.is18());
+
+//if we do this then all the attributes with prototype will be consoled
+for (let key in user1){
+    console.log(key);
+}
+
+//if we dont want the protype to be consoled
+for (let key in user1){
+    if(user1.hasOwnProperty(key)){
+        console.log(key);
+    }
+}

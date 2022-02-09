@@ -105,3 +105,8 @@ for (let key in user1){
         console.log(key);
     }
 }
+
+
+//Arrays are also objects because internally they are created using new array()
+let numbers=[1,3,4]; // internally let numbers = new Array(1,2,3)
+console.log(Object.getPrototypeOf(numbers)); 

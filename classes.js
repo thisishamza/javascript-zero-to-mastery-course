@@ -79,7 +79,7 @@ class Person{
         this.lastName = lastName;
     }
 
-    setFullName(fullName){
+    set fullName(fullName){
         const [firstName, lastName] = fullName.split(" ");
         this.firstName = firstName;
         this.lastName = lastName;
@@ -101,3 +101,38 @@ person1.lastName="ismail";
 // now the set method will be called changing the first name and last name of object
 person1.fullName = "Muhammad Hamza";
 console.log(person1);
+
+
+
+// static methods and properties
+//static methods are directly linked to class
+class Person{
+    constructor(firstName, lastName,age){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+    static classInfo(){
+        return `this is person class`;
+    }
+
+    static desc = "static property";
+    test(){ //called using object
+        console.log("this is test")
+    }
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    }
+
+    set fullName(fullName){
+        const [firstName, lastName] = fullName.split(" ");
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+}
+
+// static method are not called by creating object
+console.log(Person.classInfo()); // static method called direclty using class
+
+// static properties also can be accessed via class
+console.log(Person.desc)

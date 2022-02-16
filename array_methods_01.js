@@ -1,4 +1,5 @@
 //important array methods
+
 //forEach
 //map
 //filter
@@ -37,7 +38,7 @@ const users = [
 users.forEach(function(obj){
     console.log(obj.firstName)
 });
-//trying this will arrow function
+//trying this with arrow function
 users.forEach((obj) => {
     console.log(obj.firstName)
 });

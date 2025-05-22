@@ -9,3 +9,4 @@
 According to ECMAScript
 1. Early error checking
 2. Determining Scope of all variables
+3. 

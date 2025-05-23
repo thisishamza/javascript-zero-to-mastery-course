@@ -1,6 +1,58 @@
 //DRY rule
 // Dont Repeat Yourself
 
+
+//function statement aka function declaration
+function a(){
+    console.log("hello a");
+}
+
+//function expression
+var b = function(){
+    console.log("hello b");
+}
+
+
+//Anonymous function
+// function (){
+//
+// }
+
+
+//Named function expression
+var c = function xyz(){
+    console.log("hello c");
+}
+
+//difference between parameter and arguments
+//parameter is the variable in the function declaration
+//arguments are the values that are passed into the function when it is called
+
+
+//First class function
+//abiliity of function to be used as a value
+//functions are first class citizens in JavaScript
+//functions can be assigned to variables
+//functions can be passed as arguments to other functions
+// can be returned from other functions
+// can be stored in data structures like arrays and objects
+//functions can be used as methods of objects
+//functions can be used as constructors
+//functions can be used as callbacks
+//functions can be used as promises
+//functions can be used as async functions
+//functions can be used as generators
+//functions can be used as async generators
+//functions can be used as iterators
+//functions can be used as async iterators
+
+//Arrow function
+//function that is defined using the arrow syntax
+var add = (a,b) => {
+    return a+b;
+}
+
+
 //function declaration
 function sayWelcomeMessage(){
     console.log("Welcome to the program");

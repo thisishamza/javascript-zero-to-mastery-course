@@ -25,6 +25,10 @@ x(function y(){
 // they are used to handle asynchronous operations and to make the code more readable and maintainable.
 // they are also used to pass functions as arguments to other functions.
 
+// issue with callback functions
+// callback hell is a situation where there are too many nested callback functions, making the code difficult to read and maintain.
+// inversion of control is another issue with callback functions, where the control of the flow of the program is passed to the callback function,
+
 
 // deep about event listeners
 // event listeners are functions that are called when a specific event occurs.
